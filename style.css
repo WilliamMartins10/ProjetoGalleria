@@ -1,0 +1,23 @@
+body{
+    background: #121214;
+}
+
+.gallery{
+    column-count: 3;
+    column-gap: 0;
+
+}
+
+img{
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    
+    transition: scale 350ms ease, opacity
+    350ms linear;
+}
+
+.gallery:has(img:hover) img:not(:hover) {
+  scale: .9;
+  opacity: 0.7;
+}
